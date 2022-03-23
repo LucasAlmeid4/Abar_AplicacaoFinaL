@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import LayoutFeed from '../../Components/LayoutFeed/LayoutFeed'
 import api from '../../service/api'
+import './index.css'
 const Login = () => {
 
     const username = useRef()
@@ -41,7 +42,7 @@ const Login = () => {
         <>
         <div></div>
             {localStorage.getItem("token") === null ?
-                <>
+                <div className='contaner login text-center'>
                     <h1>Login</h1>
                     <form onSubmit={logar}>
                         <div className="form-group">
@@ -52,12 +53,12 @@ const Login = () => {
                             <label>Password</label>
                             <input type="password" className="form-control" ref={password} />
                         </div>
-                        <button type="submit" className="btn btn-primary">Enviar</button>
+                        <button type="submit" className="btn btn-primary mt-2">Enviar</button>
                     </form>
                     
                    
 
-                </>
+                </div>
                 : 
                 <>
                   <LayoutFeed></LayoutFeed>

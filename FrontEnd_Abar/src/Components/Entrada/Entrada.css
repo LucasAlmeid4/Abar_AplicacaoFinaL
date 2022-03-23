@@ -187,9 +187,21 @@ p{
     font-size: 3em;
     line-height: 1.5;
 }
-
+.corSvg{
+    color: red;
+}
 .conf-btn{
     margin: 5% 2%;
+}
+
+.paragrafo{
+    color: #fff;
+    font-weight: 200
+}
+
+.abar-bg img{
+    width:;
+    margin: 0 25% 0 25%;
 }
 
 /* Contato */

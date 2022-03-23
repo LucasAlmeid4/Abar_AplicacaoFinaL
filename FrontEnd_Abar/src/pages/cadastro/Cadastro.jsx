@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import api from "../../service/api";
+import './index.css'
+
 
 export default function Cadastro() {
   const username = useRef();
@@ -21,21 +23,21 @@ export default function Cadastro() {
   }
 
   return (
-    <>
+    <div className='contaner casdastro text-center'>
       <h3 className="mt-5">Adicionar User</h3>
       <form onSubmit={addUser}>
         <div className="form-group">
-          <label>Username</label>
+          <label>Nome de usuario</label>
           <input type="text" className="form-control" ref={username} />
         </div>
         <div className="form-group">
-          <label>Password</label>
+          <label>Senha</label>
           <input type="password" className="form-control" ref={password} />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary mt-2">
           Enviar
         </button>
       </form>
-    </>
+    </div>
   );
 }
